@@ -25,15 +25,24 @@ function b = float2bin(number,dec_length)
     end
 
     if length(Array1) == 0
-        b=char(sprintf("%i", Array2));
-        b=strcat('0', '.', b);
+        temp_dp = char(46);
+        temp_dp
+        b = [0 temp_dp Array2];
+        b=char(b);
+        c=[b]
+        sprintf("%d", c)
+    char(c)
     else if length(Array2) ~= 0
+        Array1
+        Array2
         Array1 = fliplr(Array1);
-        Array1 = char(sprintf("%i", Array1));
-        Array2 = char(sprintf("%i", Array2));
-        b = strcat(Array1, '.', Array2);
+        Array1(end + 1) = '.';
+        Array1
+        b = [Array1 '.' Array2];
+        b=char(b);
     else 
-        Array1 = fliplr(Array1);
-        b = char(sprintf("%i", Array1));
-    end  
+        b = [fliplr(Array1)];
+        b=char(b);
+    end
+    
 end
